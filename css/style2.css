@@ -1,0 +1,622 @@
+/* 
+
+    font-family: 'Mansalva', cursive;
+
+    font-family: 'Quicksand', sans-serif;
+
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Header */
+header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.gray {
+  width: 100vw;
+  height: 100vh;
+  animation: gray 9s linear infinite;
+}
+
+.member {
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  right: 15%;
+  width: 50%;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: text 9s linear infinite;
+}
+
+.member h1 {
+  font-size: 1.8rem;
+}
+
+.member h2 {
+  font-size: 1.2rem;
+}
+
+.btn {
+  position: absolute;
+  bottom: 100px;
+  left: 50vw;
+  transform: translateX(-50%);
+}
+
+.btn a button {
+  width: 220px;
+  height: 100px;
+  border-radius: 20px;
+  font-size: 24px;
+  background-color: transparent;
+  color: white;
+  letter-spacing: 2.5px;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+aside {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: -70px;
+  right: 0px;
+  width: 210px;
+  height: 80px;
+  background: rgb(12, 22, 116);
+  transition: 0.3s linear;
+}
+
+aside.active {
+  top: 0px;
+}
+
+.m1 i,
+.m2 i,
+.m3 i {
+  background-color: transparent;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+div.change {
+  position: fixed;
+  top: 5px;
+  right: 250px;
+
+  color: rgb(12, 22, 116);
+  font-size: 30px;
+  z-index: 1;
+}
+
+.arrow1,
+.arrow2 {
+  cursor: pointer;
+}
+
+.arrow2 {
+  display: none;
+}
+
+.arrow1.active {
+  display: none;
+}
+
+.arrow2.active {
+  display: block;
+}
+
+@media (orientation: landscape) {
+  .team img.gray {
+    top: 0;
+    bottom: 0;
+    left: -70px;
+    width: 200vh;
+  }
+
+  .team .member {
+    top: 15%;
+    left: 10%;
+    width: 50%;
+  }
+
+  .btn {
+    bottom: 50px;
+  }
+
+  .btn a button {
+    width: 220px;
+    height: 100px;
+    border-radius: 20px;
+    font-size: 24px;
+    background-color: transparent;
+    color: white;
+    letter-spacing: 2.5px;
+    border: 1px solid white;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 1025px) {
+  .team .gray {
+    height: 100vh;
+    width: 1600px;
+  }
+
+  .team .member {
+    top: 20%;
+    left: 10%;
+    width: 50%;
+  }
+
+  .member h1 {
+    font-size: 56px;
+    color: wheat;
+  }
+
+  .member h2 {
+    font-size: 42px;
+  }
+
+  aside {
+    right: 50px;
+  }
+
+  div.change {
+    top: 10px;
+    right: 300px;
+  }
+
+  .btn {
+    right: 50px;
+    transform: translate(0);
+    bottom: 100px;
+  }
+
+  .btn a button {
+    width: 280px;
+    font-size: 30px;
+  }
+}
+
+@keyframes gray {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(20%) scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes text {
+  0% {
+    transform: translateX(20%) scale(1);
+  }
+
+  100% {
+    transform: translateX(-15%) scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* sekcja features */
+
+.features {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  max-width: 1280px;
+  min-height: 100vh;
+  background-color: white;
+  font-family: "Quicksand", sans-serif;
+}
+
+.features h1 {
+  text-align: center;
+  padding: 20px;
+  font-size: 23px;
+}
+
+.feature img {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.features h2 {
+  margin-top: 20px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.features p {
+  font-size: 14px;
+  text-align: center;
+  padding: 0 20px 0 20px;
+}
+
+@media (min-width: 421px) {
+  .features p {
+    font-size: 16px;
+    text-align: center;
+    padding: 20px 20px 0 20px;
+  }
+}
+
+@media (min-width: 641px) {
+  .features p {
+    font-size: 18px;
+    text-align: center;
+    padding: 20px 20px 0 20px;
+  }
+
+  .features h1 {
+    font-size: 35px;
+  }
+
+  .feature img {
+    width: 65%;
+  }
+
+  .features h2 {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 801px) {
+  .features {
+    min-height: 100vh;
+  }
+
+  .features p {
+    font-size: 20px;
+  }
+
+  .feature img {
+    width: 50%;
+  }
+
+  .features h2 {
+    font-size: 28px;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 1024px) {
+  .features {
+    max-width: 1280px;
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .features h1 {
+    flex-basis: 100%;
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+
+  .features div.feature {
+    flex-basis: 30%;
+  }
+
+  div.feature h2 {
+    font-size: 16px;
+  }
+
+  div.feature p {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .features {
+    display: flex;
+    flex-direction: row;
+    min-height: 150vh;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .features div.feature {
+    flex-basis: 30%;
+  }
+
+  .features h1 {
+    flex-basis: 100%;
+    font-size: 40px;
+    margin: 30px 0;
+  }
+
+  div.feature img {
+    width: 100%;
+  }
+
+  div.feature h2 {
+    font-size: 25px;
+  }
+
+  div.feature p {
+    font-size: 20px;
+  }
+}
+
+/* sekcja portfolio */
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1280px;
+  background-color: black;
+  margin: 0;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.portfolio h1 {
+  flex-basis: 100%;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-family: "Quicksand", sans-serif;
+}
+
+a img {
+  display: block;
+  width: 90%;
+  height: 90%;
+  background-color: grey;
+}
+
+/* .portfolio a {
+  background-color: black;
+  margin: 10px;
+  flex-basis: 48%;
+  text-align: center;
+} */
+
+/* sekcja motto */
+
+.motto {
+  background-image: url(../img/motto.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  min-height: 100vh;
+  max-width: 1280px;
+  background-size: cover;
+  padding: 10px 20px;
+  padding-top: 100px;
+  font-family: "Quicksand", sans-serif;
+  color: black;
+}
+
+.one h1 {
+  padding: 20px;
+}
+
+.two h2 {
+  text-align: center;
+}
+
+.two p {
+  padding: 20px;
+  font-size: 20px;
+  text-align: right;
+}
+
+@media (min-width: 1025px) {
+  .one h1 {
+    font-size: 42px;
+  }
+
+  .two h2 {
+    font-size: 38px;
+  }
+
+  .two p {
+    font-size: 30px;
+  }
+}
+
+/* sekcja hobby */
+
+.hobby {
+  max-width: 1280px;
+}
+
+.item {
+  height: 30vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hobby div.item:hover {
+  background-size: 200%;
+}
+
+div.item:nth-of-type(1) {
+  background-image: url(../img/gory.jpg);
+}
+
+.item:nth-of-type(2) {
+  background-image: url(../img/play.jpg);
+}
+
+.item:nth-of-type(3) {
+  background-image: url(../img/pizza.jpg);
+}
+
+.item:nth-of-type(4) {
+  background-image: url(../img/barcelona.jpg);
+}
+
+.item p {
+  font-family: "Mansalva", cursive;
+  color: white;
+  text-align: center;
+  text-shadow: 0 0 4px black;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 20px;
+  padding: 5px 0;
+}
+
+.hobby h1 {
+  font-size: 24px;
+  text-transform: uppercase;
+  padding: 20px;
+  font-family: "Saira Condensed", sans-serif;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .hobby {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-around;
+    align-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .hobby h1 {
+    flex-basis: 100%;
+  }
+
+  .hobby div.item {
+    flex-basis: 50%;
+    margin-top: 5px;
+  }
+}
+
+@media (min-width: 801px) {
+  .item p {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .hobby h1 {
+    font-size: 36px;
+  }
+
+  .hobby div.item {
+    flex-basis: 50%;
+    height: 50vh;
+    background-size: 150%;
+    margin: 0;
+    transition: 0.3s;
+  }
+
+  div.item:nth-of-type(1) {
+    background-size: 200%;
+  }
+
+  div.item:nth-of-type(1):hover {
+    background-size: 250%;
+  }
+}
+
+/*Sekcja Kontak*/
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 75vh;
+  width: 80vw;
+  max-width: 1280px;
+  margin: 10px auto;
+  font-family: "Quicksand", sans-serif;
+  background-color: #000;
+  color: white;
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.social {
+  flex-basis: 100%;
+  height: 100px;
+  position: relative;
+}
+
+.social img {
+  float: left;
+}
+#yT {
+  display: block;
+  width: 80px;
+  height: 70px;
+  background-color: red;
+  font-size: 70px;
+}
+
+.social a,
+.social p {
+  display: block;
+  position: absolute;
+  top: 25px;
+  left: 80px;
+  text-decoration: none;
+  font-size: 17px;
+  color: white;
+}
+
+footer {
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+}
+
+/* @media(orientation: landscape) {
+  .contact {
+    min-height: 90vh;
+  }
+
+  h1 {
+    padding: 30px;
+  }
+
+  .social a,
+  .social p {
+    width: 100%;
+    left: 100px;
+    font-size: 20px;
+
+  }
+} */
